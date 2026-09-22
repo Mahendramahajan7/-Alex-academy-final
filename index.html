@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALEX English Speaking Courses — Voice & Accent Classes, Chandannagar Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --ink:#1C3B32;
+  --ink-soft:#35594B;
+  --paper:#FAF6EC;
+  --paper-dim:#F0E7D3;
+  --marigold:#D6653E;
+  --marigold-deep:#B84F2E;
+  --teal:#2B5D8C;
+  --teal-soft:#DCE7F0;
+  --charcoal:#241F1A;
+  --line:#E1D6BC;
+  --white:#FFFFFF;
+  --danger:#B8443B;
+  --shadow-soft: 0 10px 28px rgba(28,59,50,0.14);
+  --radius: 6px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--charcoal);
+  font-family:'Work Sans', sans-serif;
+  font-size:16px;
+  line-height:1.6;
+}
+h1,h2,h3,h4{
+  font-family:'Fraunces', serif;
+  color:var(--ink);
+  margin:0;
+  font-weight:600;
+  letter-spacing:-0.01em;
+}
+p{margin:0 0 1em 0;}
+a{color:inherit;text-decoration:none;}
+img{max-width:100%;display:block;}
+.container{max-width:1120px;margin:0 auto;padding:0 24px;}
+section{padding:88px 0;}
+.eyebrow-plain{color:var(--marigold-deep); font-weight:600; font-size:0.95rem;}
+:focus-visible{outline:3px solid var(--marigold); outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){
+  *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+}
+
+/* ============ NAV ============ */
+.nav{
+  position:sticky; top:0; z-index:500;
+  background:var(--ink);
+  color:var(--paper);
+}
+.nav-inner{
+  max-width:1120px; margin:0 auto; padding:0 24px;
+  display:flex; align-items:center; justify-content:space-between;
+  height:72px;
+}
+.brand{display:flex; align-items:center; gap:12px;}
+.brand-mark{
+  width:40px; height:40px; border-radius:50%;
+  background:var(--marigold);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Fraunces', serif; font-weight:700; color:var(--ink);
+  font-size:1.1rem; flex-shrink:0;
+}
+.brand-text{font-family:'Fraunces', serif; font-size:1.15rem; color:var(--white); font-weight:600;}
+.brand-text span{display:block; font-family:'Work Sans',sans-serif; font-size:0.68rem; letter-spacing:0.04em; color:var(--marigold); font-weight:500;}
+.nav-links{display:flex; gap:28px; align-items:center;}
+.nav-links a{
+  font-size:0.92rem; color:var(--paper-dim); font-weight:500;
+  padding:6px 2px; border-bottom:2px solid transparent;
+  transition:border-color 0.2s, color 0.2s;
+}
+.nav-links a:hover{color:var(--white); border-bottom-color:var(--marigold);}
+.nav-cta{
+  background:var(--marigold); color:var(--ink) !important; padding:10px 18px !important;
+  border-radius:var(--radius); font-weight:600 !important; border-bottom:none !important;
+}
+.nav-cta:hover{background:var(--white) !important;}
+.nav-toggle{display:none; background:none; border:none; color:var(--white); font-size:1.6rem; cursor:pointer;}
+@media (max-width: 860px){
+  .nav-links{
+    position:absolute; top:72px; left:0; right:0; background:var(--ink);
+    flex-direction:column; align-items:flex-start; padding:12px 24px 20px; gap:16px;
+    display:none;
+  }
+  .nav-links.open{display:flex;}
+  .nav-toggle{display:block;}
+}
+
+/* ============ TICKER (new batches / batch timings) ============ */
+.ticker{
+  background:var(--marigold); color:var(--ink); overflow:hidden; position:relative;
+  border-bottom:1px solid rgba(61,22,53,0.15);
+}
+.ticker-track{
+  display:flex; gap:48px; white-space:nowrap; padding:9px 0;
+  animation:tickerScroll 22s linear infinite;
+  width:max-content;
+}
+.ticker-track span{font-size:0.86rem; font-weight:600; display:inline-flex; align-items:center; gap:8px;}
+.live-dot{width:8px; height:8px; border-radius:50%; background:var(--ink); display:inline-block; animation:pulseDot 1.4s ease-in-out infinite;}
+@keyframes pulseDot{0%,100%{opacity:1; transform:scale(1);} 50%{opacity:0.35; transform:scale(1.4);}}
+@keyframes tickerScroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+@media (prefers-reduced-motion: reduce){ .ticker-track{animation:none;} }
+
+/* ============ HERO ============ */
+.hero{
+  background:linear-gradient(180deg, var(--ink) 0%, #21335c 100%);
+  color:var(--paper);
+  padding:100px 0 90px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";
+  position:absolute; right:-120px; top:-120px; width:420px; height:420px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(232,163,61,0.18), transparent 70%);
+}
+.hero-inner{
+  max-width:1120px; margin:0 auto; padding:0 24px;
+  display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+  position:relative; z-index:2;
+}
+@media (max-width:860px){
+  .hero-inner{ grid-template-columns:1fr; gap:36px; }
+  .hero{ padding:70px 0 60px; }
+  .hero-sub{ max-width:100%; }
+}
+.hero h1{
+  font-size:clamp(2.2rem, 4vw, 3.4rem); color:var(--white); line-height:1.08;
+}
+.hero-sub{color:var(--paper-dim); font-size:1.1rem; max-width:480px; margin-top:18px;}
+.hero-loc{
+  display:inline-flex; align-items:center; gap:8px; margin-bottom:18px;
+  background:rgba(255,255,255,0.08); padding:7px 14px; border-radius:999px;
+  font-size:0.85rem; color:var(--marigold); font-weight:600;
+}
+.hero-cta-row{display:flex; gap:14px; margin-top:32px; flex-wrap:wrap;}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:14px 26px; border-radius:var(--radius); font-weight:600; font-size:0.98rem;
+  cursor:pointer; border:2px solid transparent; transition:transform 0.15s, background 0.2s, color 0.2s;
+  font-family:'Work Sans',sans-serif;
+}
+.btn:hover{transform:translateY(-2px);}
+.btn-primary{background:var(--marigold); color:var(--ink);}
+.btn-primary:hover{background:var(--marigold-deep); color:var(--white);}
+.btn-outline{border-color:rgba(255,255,255,0.5); color:var(--white); background:transparent;}
+.btn-outline:hover{border-color:var(--white); background:rgba(255,255,255,0.08);}
+.btn-teal{background:var(--teal); color:var(--white);}
+.btn-teal:hover{background:#175243;}
+.btn-full{width:100%;}
+.btn-small{padding:9px 16px; font-size:0.85rem;}
+
+/* Speech bubble typing panel */
+.speak-card{
+  background:var(--white); border-radius:14px; padding:26px 24px;
+  box-shadow:var(--shadow-soft); color:var(--charcoal); position:relative;
+  min-height:220px;
+}
+.speak-card::before{
+  content:""; position:absolute; bottom:-14px; left:44px;
+  width:26px; height:26px; background:var(--white);
+  clip-path:polygon(0 0, 100% 0, 0 100%);
+}
+.speak-row{display:flex; align-items:flex-start; gap:12px; margin-bottom:16px;}
+.speak-avatar{
+  width:34px; height:34px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center; font-size:0.85rem; font-weight:700; color:var(--white);
+}
+.speak-avatar.a{background:var(--teal);}
+.speak-avatar.s{background:var(--marigold-deep);}
+.speak-bubble{
+  background:var(--paper-dim); border-radius:10px; padding:10px 14px; font-size:0.92rem;
+  min-height:1.4em;
+}
+.speak-cursor{display:inline-block; width:2px; background:var(--ink); margin-left:2px; animation:blink 0.9s steps(1) infinite; height:1em; vertical-align:-0.15em;}
+@keyframes blink{50%{opacity:0;}}
+.speak-caption{font-size:0.78rem; color:#7a7264; margin-top:10px; text-align:right;}
+
+/* ============ TRUST STRIP ============ */
+.trust{background:var(--white); border-bottom:1px solid var(--line); border-top:1px solid var(--line);}
+.trust-inner{
+  max-width:1120px; margin:0 auto; padding:36px 24px;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;
+}
+.trust-num{font-family:'Fraunces',serif; font-size:2.1rem; color:var(--ink); font-weight:700;}
+.trust-label{font-size:0.85rem; color:#6b6456; margin-top:4px;}
+@media (max-width:700px){.trust-inner{grid-template-columns:repeat(2,1fr);}}
+
+/* ============ SECTION HEADERS ============ */
+.sec-head{max-width:640px; margin-bottom:48px;}
+.sec-head p{color:#5c5647; font-size:1.05rem; margin-top:12px;}
+.sec-head h2{font-size:clamp(1.7rem, 3vw, 2.3rem);}
+.center{text-align:center; margin-left:auto; margin-right:auto;}
+
+/* ============ ABOUT ============ */
+.about{background:var(--paper);}
+.about-grid{display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px; align-items:start;}
+.about-photo{
+  background:var(--ink); border-radius:14px; aspect-ratio:4/5; position:relative; overflow:hidden;
+  display:flex; align-items:center; justify-content:center;
+}
+.about-photo svg{width:70%; height:70%;}
+.about-list{list-style:none; margin:22px 0 0; padding:0; display:grid; gap:14px;}
+.about-list li{display:flex; gap:12px; align-items:flex-start; font-size:0.98rem;}
+.about-list .dot{width:8px;height:8px;border-radius:50%;background:var(--marigold-deep); margin-top:8px; flex-shrink:0;}
+@media (max-width:820px){.about-grid{grid-template-columns:1fr;} .about-photo{aspect-ratio:16/9;}}
+
+/* ============ COURSES ============ */
+.courses{background:var(--white);}
+.course-row{
+  display:grid; grid-template-columns:auto 1fr auto; gap:24px; align-items:center;
+  padding:24px 0; border-bottom:1px solid var(--line);
+}
+.course-row:first-of-type{border-top:1px solid var(--line);}
+.course-badge{
+  width:52px; height:52px; border-radius:50%; background:var(--teal-soft); color:var(--teal);
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+}
+.course-badge svg{width:26px; height:26px;}
+.course-title{font-family:'Fraunces',serif; font-size:1.2rem; color:var(--ink); font-weight:600;}
+.course-meta{font-size:0.86rem; color:#726c5d; margin-top:4px;}
+.course-meta span{margin-right:14px;}
+@media (max-width:700px){
+  .course-row{grid-template-columns:auto 1fr; }
+  .course-row .btn{grid-column:1 / -1; margin-top:12px;}
+}
+
+/* ============ ADMISSION TIMELINE ============ */
+.admission-intro{background:var(--paper-dim);}
+.timeline{display:grid; grid-template-columns:repeat(5,1fr); gap:18px; margin-top:10px;}
+.tl-step{position:relative; padding-top:44px;}
+.tl-num{
+  position:absolute; top:0; left:0; width:34px; height:34px; border-radius:50%;
+  background:var(--ink); color:var(--marigold); font-family:'Fraunces',serif; font-weight:700;
+  display:flex; align-items:center; justify-content:center; font-size:0.95rem;
+}
+.tl-step::after{
+  content:""; position:absolute; top:17px; left:44px; right:-18px; height:2px; background:var(--line);
+}
+.tl-step:last-child::after{display:none;}
+.tl-title{font-weight:600; color:var(--ink); font-size:0.98rem; margin-bottom:6px;}
+.tl-desc{font-size:0.85rem; color:#6b6456;}
+@media (max-width:900px){
+  .timeline{grid-template-columns:1fr 1fr;}
+  .tl-step::after{display:none;}
+}
+@media (max-width:520px){.timeline{grid-template-columns:1fr;}}
+
+/* ============ FORM ELEMENTS ============ */
+.form-panel{
+  background:var(--white); border:1px solid var(--line); border-radius:14px; padding:36px;
+  box-shadow:var(--shadow-soft);
+}
+.form-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+.field{display:flex; flex-direction:column; gap:6px; margin-bottom:16px;}
+.field.full{grid-column:1 / -1;}
+.field label{font-size:0.85rem; font-weight:600; color:var(--ink-soft);}
+.field input, .field select, .field textarea{
+  font-family:'Work Sans',sans-serif; font-size:0.96rem; padding:11px 13px;
+  border:1.5px solid var(--line); border-radius:8px; background:var(--paper);
+  color:var(--charcoal);
+}
+.field input:focus, .field select:focus, .field textarea:focus{border-color:var(--marigold-deep); background:var(--white);}
+.field-check{display:flex; align-items:center; gap:9px; font-size:0.92rem; grid-column:1/-1;}
+.field-check input{width:17px; height:17px;}
+.form-note{font-size:0.82rem; color:#8a8470; margin-top:14px;}
+.alert{
+  padding:14px 16px; border-radius:8px; font-size:0.9rem; margin-top:16px; display:none;
+}
+.alert.show{display:block;}
+.alert-success{background:var(--teal-soft); color:var(--teal); border:1px solid #b7d8cd;}
+.alert-error{background:#f7e4e1; color:var(--danger); border:1px solid #eec2bc;}
+@media (max-width:640px){.form-grid{grid-template-columns:1fr;} .form-panel{padding:24px;}}
+
+/* ============ FEES ============ */
+.fees{background:var(--paper);}
+.fee-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:22px;}
+.fee-card{
+  background:var(--white); border-radius:12px; padding:26px 24px; border-top:4px solid var(--marigold);
+  display:flex; flex-direction:column; gap:10px;
+}
+.fee-card.alt{border-top-color:var(--teal);}
+.fee-card.alt2{border-top-color:var(--ink);}
+.fee-name{font-family:'Fraunces',serif; font-size:1.15rem; color:var(--ink); font-weight:600;}
+.fee-price{font-size:1.9rem; font-weight:700; color:var(--ink); font-family:'Fraunces',serif;}
+.fee-price span{font-size:0.85rem; font-weight:500; color:#847d6c;}
+.fee-duration{font-size:0.85rem; color:#726c5d;}
+.fee-card ul{margin:6px 0 8px; padding-left:18px; font-size:0.87rem; color:#4d4a3f;}
+.fee-card ul li{margin-bottom:4px;}
+@media (max-width:860px){.fee-grid{grid-template-columns:1fr 1fr;}}
+@media (max-width:560px){.fee-grid{grid-template-columns:1fr;}}
+
+/* Payment modal */
+.modal-overlay{
+  position:fixed; inset:0; background:rgba(27,42,74,0.55); z-index:1000;
+  display:none; align-items:center; justify-content:center; padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal-box{
+  background:var(--white); border-radius:14px; padding:32px; max-width:420px; width:100%;
+  position:relative;
+}
+.modal-close{position:absolute; top:14px; right:16px; background:none; border:none; font-size:1.4rem; cursor:pointer; color:#8a8470;}
+.pay-row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px solid var(--line); font-size:0.92rem;}
+.pay-row.total{font-weight:700; color:var(--ink); font-size:1.05rem;}
+.pay-spinner{
+  width:22px; height:22px; border-radius:50%; border:3px solid var(--line); border-top-color:var(--teal);
+  animation:spin 0.8s linear infinite; display:inline-block; vertical-align:-4px; margin-right:8px;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+.pay-success-icon{
+  width:56px; height:56px; border-radius:50%; background:var(--teal-soft); color:var(--teal);
+  display:flex; align-items:center; justify-content:center; margin:0 auto 14px; font-size:1.6rem;
+}
+
+/* ============ PORTAL / ADMIN ============ */
+.portal{background:var(--white);}
+.portal-lookup{display:flex; gap:12px; max-width:460px; flex-wrap:wrap;}
+.portal-lookup input{flex:1; min-width:200px;}
+.portal-result{margin-top:32px; display:none;}
+.portal-result.show{display:block;}
+.stat-cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin:22px 0;}
+.stat-card{background:var(--paper-dim); border-radius:10px; padding:20px; text-align:center;}
+.stat-card .val{font-family:'Fraunces',serif; font-size:1.8rem; color:var(--ink); font-weight:700;}
+.stat-card .lab{font-size:0.82rem; color:#726c5d; margin-top:4px;}
+@media (max-width:600px){.stat-cards{grid-template-columns:1fr;}}
+table.data-table{width:100%; border-collapse:collapse; font-size:0.88rem; margin-top:14px;}
+table.data-table th, table.data-table td{padding:10px 12px; border-bottom:1px solid var(--line); text-align:left;}
+table.data-table th{color:var(--ink-soft); font-weight:600; background:var(--paper-dim);}
+.tag{padding:3px 10px; border-radius:999px; font-size:0.76rem; font-weight:600; display:inline-block;}
+.tag-present{background:var(--teal-soft); color:var(--teal);}
+.tag-absent{background:#f7e4e1; color:var(--danger);}
+.tag-paid{background:var(--teal-soft); color:var(--teal);}
+.tag-pending{background:#fbeed4; color:var(--marigold-deep);}
+
+.admin{background:var(--paper-dim);}
+.admin-gate{max-width:380px;}
+.admin-panel{display:none;}
+.admin-panel.show{display:block;}
+.admin-tabs{display:flex; gap:10px; margin-bottom:24px; flex-wrap:wrap;}
+.admin-tab-btn{
+  padding:9px 18px; border-radius:999px; border:1.5px solid var(--line); background:var(--white);
+  font-size:0.88rem; font-weight:600; color:var(--ink-soft); cursor:pointer;
+}
+.admin-tab-btn.active{background:var(--ink); color:var(--white); border-color:var(--ink);}
+.admin-view{display:none;}
+.admin-view.active{display:block;}
+.admin-block{background:var(--white); border-radius:12px; padding:24px; margin-bottom:20px; border:1px solid var(--line);}
+.table-wrap{overflow-x:auto;}
+
+/* ============ TESTIMONIALS ============ */
+.testi{background:var(--ink); color:var(--paper);}
+.testi .sec-head h2{color:var(--white);}
+.testi .sec-head p{color:var(--paper-dim);}
+.testi-slide{
+  background:rgba(255,255,255,0.06); border-radius:14px; padding:36px; max-width:720px; margin:0 auto;
+  position:relative;
+}
+.testi-quote{font-family:'Fraunces',serif; font-size:1.3rem; font-style:italic; color:var(--white); line-height:1.5;}
+.testi-name{margin-top:18px; font-weight:600; color:var(--marigold);}
+.testi-role{font-size:0.85rem; color:var(--paper-dim);}
+.testi-nav{display:flex; justify-content:center; gap:14px; margin-top:26px;}
+.testi-dot{width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.3); border:none; cursor:pointer;}
+.testi-dot.active{background:var(--marigold);}
+
+/* ============ GALLERY (illustrated moments) ============ */
+.moments-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:18px;}
+.moment-card{background:var(--white); border-radius:12px; padding:22px; text-align:center; border:1px solid var(--line);}
+.moment-card svg{width:44px; height:44px; margin:0 auto 12px; color:var(--teal);}
+.moment-card h4{font-size:0.98rem; margin-bottom:6px;}
+.moment-card p{font-size:0.83rem; color:#726c5d; margin:0;}
+@media (max-width:860px){.moments-grid{grid-template-columns:1fr 1fr;}}
+
+/* ============ CONTACT ============ */
+.contact{background:var(--white);}
+.contact-grid{display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start;}
+.contact-info-item{display:flex; gap:14px; margin-bottom:20px; align-items:flex-start;}
+.contact-info-item .ic{width:38px; height:38px; border-radius:50%; background:var(--teal-soft); color:var(--teal); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+.contact-info-item strong{display:block; color:var(--ink); font-size:0.95rem;}
+.contact-info-item span{font-size:0.9rem; color:#5c5647;}
+.map-wrap{border-radius:12px; overflow:hidden; border:1px solid var(--line); height:100%; min-height:300px;}
+.map-wrap iframe{width:100%; height:100%; min-height:300px; border:0; display:block;}
+@media (max-width:820px){.contact-grid{grid-template-columns:1fr;}}
+
+/* ============ COUNTER (Counting animation for stats, respects reduced-motion) ============ */
+
+/* ============ FOOTER ============ */
+footer{background:var(--ink); color:var(--paper-dim); padding:48px 0 24px;}
+.foot-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:36px;}
+.foot-title{color:var(--white); font-weight:600; margin-bottom:14px; font-size:0.95rem;}
+.foot-links{list-style:none; padding:0; margin:0; display:grid; gap:10px; font-size:0.88rem;}
+.foot-bottom{
+  margin-top:36px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.12);
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:0.8rem; color:#9aa3bd;
+}
+@media (max-width:700px){.foot-grid{grid-template-columns:1fr;}}
+
+.demo-note{
+  font-size:0.78rem; color:#9aa3bd; max-width:400px; line-height:1.5;
+}
+
+/* ============ SCROLL TO TOP ============ */
+.scroll-top-btn{
+  position:fixed; right:20px; bottom:20px; z-index:400;
+  width:48px; height:48px; border-radius:50%;
+  background:var(--marigold); color:var(--ink); border:none;
+  display:flex; align-items:center; justify-content:center;
+  cursor:pointer; box-shadow:0 6px 18px rgba(0,0,0,0.25);
+  opacity:0; visibility:hidden; transform:translateY(12px);
+  transition:opacity 0.25s, transform 0.25s, visibility 0.25s, background 0.2s;
+}
+.scroll-top-btn.show{ opacity:1; visibility:visible; transform:translateY(0); }
+.scroll-top-btn:hover{ background:var(--marigold-deep); }
+.scroll-top-btn svg{ width:22px; height:22px; }
+@media (prefers-reduced-motion: reduce){ .scroll-top-btn{ transition:opacity 0.01ms, visibility 0.01ms; } }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <div class="brand-mark">A</div>
+      <div class="brand-text">ALEX<span>ENGLISH SPEAKING COURSES · CHANDANNAGAR, PUNE</span></div>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">&#9776;</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#courses">Courses</a>
+      <a href="#admission">Admission</a>
+      <a href="#fees">Fees</a>
+      <a href="#portal">Student Portal</a>
+      <a href="#admin">Admin</a>
+      <a href="#contact">Contact</a>
+      <a href="#admission" class="nav-cta">Enrol Now</a>
+    </div>
+  </div>
+</nav>
+<div class="ticker">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ============ HERO ============ -->
+<header class="hero" id="home">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-loc">&#128205; Bhaji Market, Chandannagar, Pune · Reg. No. 111054</div>
+      <h1>Quitters never win, and winners never quit.</h1>
+      <p class="hero-sub">ALEX English Speaking Courses & Voice-Accent Classes trains students, housewives, officers, doctors, engineers and working professionals across Chandannagar to actually speak English — with correct pronunciation, accent and grammar, not just theory.</p>
+      <div class="hero-cta-row">
+        <a href="#admission" class="btn btn-primary">Book a Free Demo Class</a>
+        <a href="https://wa.me/919767916945" class="btn btn-outline" target="_blank" rel="noopener">&#128242; WhatsApp 97679 16945</a>
+      </div>
+    </div>
+    <div class="speak-card">
+      <div class="speak-row">
+        <div class="speak-avatar a">A</div>
+        <div class="speak-bubble">Tell me about your weekend — don't translate, just speak.</div>
+      </div>
+      <div class="speak-row">
+        <div class="speak-avatar s">S</div>
+        <div class="speak-bubble" id="typingBubble"><span id="typingText"></span><span class="speak-cursor"></span></div>
+      </div>
+      <div class="speak-caption">— a Level 2 Fluency Lab session</div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ TRUST STRIP ============ -->
+<div class="trust">
+  <div class="trust-inner">
+    <div><div class="trust-num" data-count="1400">0</div><div class="trust-label">Students trained</div></div>
+    <div><div class="trust-num" data-count="9">0</div><div class="trust-label">Years in Chandan Nagar</div></div>
+    <div><div class="trust-num" data-count="60">0</div><div class="trust-label">Batches run</div></div>
+    <div><div class="trust-num" data-count="4.8" data-decimal="1">0</div><div class="trust-label">Average rating / 5</div></div>
+  </div>
+</div>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-photo">
+      <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="100" cy="100" r="96" fill="#28406e"/>
+        <path d="M55 120 Q100 70 145 120" stroke="#E8A33D" stroke-width="6" fill="none" stroke-linecap="round"/>
+        <circle cx="70" cy="95" r="9" fill="#FBF7EF"/>
+        <circle cx="130" cy="95" r="9" fill="#FBF7EF"/>
+        <path d="M40 140c20 20 100 20 120 0" stroke="#FBF7EF" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+      </svg>
+    </div>
+    <div>
+      <p class="eyebrow-plain">About the Academy</p>
+      <h2 style="margin-top:8px;">New batches starting now at Harikrishna Complex</h2>
+      <p style="margin-top:16px;">ALEX English Speaking Courses runs from Harikrishna Complex, above Sankalp Computers, Bhaji Market, Chandannagar, Pune – 411014. The promise is simple: <strong>quitters never win, and winners never quit</strong> — join, stay with it, and speak. Eligibility is open to anyone who has passed at least 7th standard.</p>
+      <p><strong>Who joins?</strong> All students, housewives, officers, doctors, engineers, working professionals and anyone else who wants to speak English with confidence.</p>
+      <ul class="about-list">
+        <li><span class="dot"></span> Eligibility: minimum 7th standard pass — no other qualification needed</li>
+        <li><span class="dot"></span> Switch between any of the 4 daily batch timings whenever it suits you</li>
+        <li><span class="dot"></span> Enquiry &amp; admission open Morning 7–12 and Evening 4–9, every day</li>
+        <li><span class="dot"></span> If you complete the course and still can't speak English, your fee is refunded — but latecomers are not given admission</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COURSES ============ -->
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Courses</p>
+      <h2 style="margin-top:8px;">Pick a course, or let us place you after the demo class</h2>
+      <p>Every course opens in Morning, Evening and Weekend batches at our Chandan Nagar centre.</p>
+    </div>
+    <div id="courseList"></div>
+  </div>
+</section>
+
+<!-- ============ ADMISSION TIMELINE ============ -->
+<section class="admission-intro">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">How admission works</p>
+      <h2 style="margin-top:8px;">Five steps from enquiry to your first class</h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-step"><div class="tl-num">1</div><div class="tl-title">Free demo class</div><div class="tl-desc">Sit in on a live session, no cost, no commitment.</div></div>
+      <div class="tl-step"><div class="tl-num">2</div><div class="tl-title">Level check</div><div class="tl-desc">A short spoken chat with a trainer decides your starting level.</div></div>
+      <div class="tl-step"><div class="tl-num">3</div><div class="tl-title">Registration</div><div class="tl-desc">Fill the admission form below with your batch preference.</div></div>
+      <div class="tl-step"><div class="tl-num">4</div><div class="tl-title">Fee payment</div><div class="tl-desc">Pay online or at the centre to confirm your seat.</div></div>
+      <div class="tl-step"><div class="tl-num">5</div><div class="tl-title">Batch starts</div><div class="tl-desc">We message you the timing, room and trainer before day one.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMISSION FORM ============ -->
+<section id="admission">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Admission</p>
+      <h2 style="margin-top:8px;">Register for a course or a free demo class</h2>
+      <p>Takes two minutes. We'll call you to confirm your batch within a day.</p>
+    </div>
+    <div class="form-panel" style="max-width:760px;">
+      <form id="admissionForm">
+        <div class="form-grid">
+          <div class="field"><label for="admName">Full name</label><input type="text" id="admName" required></div>
+          <div class="field"><label for="admPhone">Mobile number</label><input type="tel" id="admPhone" pattern="[0-9]{10}" maxlength="10" placeholder="10-digit number" required></div>
+          <div class="field"><label for="admEmail">Email</label><input type="email" id="admEmail"></div>
+          <div class="field"><label for="admAge">Age</label><input type="number" id="admAge" min="5" max="80" required></div>
+          <div class="field"><label for="admCourse">Course</label><select id="admCourse" required></select></div>
+          <div class="field"><label for="admBatch">Preferred batch</label>
+            <select id="admBatch" required>
+              <option value="">Select timing</option>
+              <option value="Morning 7:00–8:30 AM">Morning 7:00–8:30 AM</option>
+              <option value="Morning 9:00–10:30 AM">Morning 9:00–10:30 AM</option>
+              <option value="Evening 5:00–6:30 PM">Evening 5:00–6:30 PM</option>
+              <option value="Evening 7:00–8:30 PM">Evening 7:00–8:30 PM</option>
+            </select>
+          </div>
+          <div class="field full"><label for="admAddress">Address (Chandannagar / nearby area)</label><input type="text" id="admAddress"></div>
+          <div class="field full"><label for="admMsg">Anything you'd like us to know</label><textarea id="admMsg" rows="3"></textarea></div>
+          <div class="field-check">
+            <input type="checkbox" id="admDemo" checked>
+            <label for="admDemo" style="font-weight:400;">This is a request for a free demo class first</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Submit registration</button>
+        <div class="alert alert-success" id="admSuccess"></div>
+        <div class="alert alert-error" id="admError">Please fill your name, a valid 10-digit mobile number, age and course.</div>
+        <p class="form-note"><strong>Eligibility:</strong> minimum 7th standard pass. Enquiry &amp; admission hours: Morning 7–12, Evening 4–9. <strong>No late admissions will be given</strong> once a batch is full or has started — please register early. By submitting, you agree we may call or message you on this number about your admission. This is a demo booking system — registration data is stored for this website only and is visible to the academy's admin view below.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEES & PAYMENT ============ -->
+<section class="fees" id="fees">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Fees &amp; Payment</p>
+      <h2 style="margin-top:8px;">Simple, one-time course fees — no hidden charges</h2>
+      <p>Pay online to confirm your seat, or choose "Pay at centre" and settle in cash on your first day. Complete the course and if you still can't speak English, your fee is refunded — that's the academy's word on it.</p>
+    </div>
+    <div class="fee-grid" id="feeGrid"></div>
+    <p class="form-note" style="margin-top:20px; max-width:640px;">Note: exact fee amounts below are placeholders — tell me which price on your pamphlet (₹7,000 / ₹7,500 / ₹4,500 / ₹3,000 / ₹2,000) belongs to which course or duration, and I'll update these cards to match exactly.</p>
+  </div>
+</section>
+
+<!-- Payment modal -->
+<div class="modal-overlay" id="payModal">
+  <div class="modal-box">
+    <button class="modal-close" id="payClose" aria-label="Close">&times;</button>
+    <div id="payStepDetails">
+      <h3 style="font-size:1.2rem;">Pay via UPI</h3>
+      <p style="font-size:0.88rem; color:#726c5d; margin-top:6px;">Enter the mobile number you registered with, then pay using any UPI app.</p>
+      <div class="field" style="margin-top:14px;"><label for="payPhone">Mobile number</label><input type="tel" id="payPhone" maxlength="10" placeholder="10-digit number"></div>
+      <div class="pay-row"><span id="payCourseLabel">Course</span><span id="payCourseAmt">₹0</span></div>
+      <div class="pay-row total"><span>Total payable</span><span id="payTotalAmt">₹0</span></div>
+      <a class="btn btn-teal btn-full" id="payUpiBtn" style="margin-top:18px;" href="#" target="_blank" rel="noopener">&#128241; Pay with UPI App</a>
+      <p class="demo-note" style="margin-top:8px;">Opens GPay / PhonePe / Paytm / any UPI app with the amount filled in. Works on mobile — on desktop, scan the code shown in that app or note the UPI ID manually.</p>
+      <button class="btn btn-primary btn-full" id="payConfirmBtn" style="margin-top:14px;">I've completed the payment</button>
+      <p class="demo-note" style="margin-top:10px;">Clicking this records your payment as <strong>pending verification</strong> — the academy confirms it once they see it credited, then updates your status.</p>
+    </div>
+    <div id="payStepProcessing" style="display:none; text-align:center; padding:20px 0;">
+      <span class="pay-spinner"></span> Saving your payment record…
+    </div>
+    <div id="payStepSuccess" style="display:none; text-align:center;">
+      <div class="pay-success-icon">&#10003;</div>
+      <h3 style="font-size:1.15rem;">Payment recorded — pending verification</h3>
+      <p style="font-size:0.9rem; color:#726c5d; margin-top:8px;">Reference ID: <strong id="payTxnId"></strong></p>
+      <p style="font-size:0.9rem; color:#726c5d;">The academy will verify your UPI payment and confirm your seat. Check the Student Portal below anytime for your status.</p>
+      <button class="btn btn-primary btn-full" id="payDoneBtn" style="margin-top:14px;">Done</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ STUDENT PORTAL ============ -->
+<section class="portal" id="portal">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Student Portal</p>
+      <h2 style="margin-top:8px;">Check your attendance, admission and payment status</h2>
+      <p>Enter the mobile number you registered with.</p>
+    </div>
+    <div class="portal-lookup">
+      <input type="tel" id="portalPhone" maxlength="10" placeholder="10-digit registered number">
+      <button class="btn btn-primary" id="portalLookupBtn">View my record</button>
+    </div>
+    <div class="alert alert-error" id="portalError">We couldn't find a registration for that number. Please check the digits or register above.</div>
+    <div class="portal-result" id="portalResult">
+      <div class="stat-cards">
+        <div class="stat-card"><div class="val" id="pStatAttendance">—</div><div class="lab">Attendance</div></div>
+        <div class="stat-card"><div class="val" id="pStatClasses">—</div><div class="lab">Classes marked</div></div>
+        <div class="stat-card"><div class="val" id="pStatPayment">—</div><div class="lab">Payment status</div></div>
+      </div>
+      <h4 style="margin-top:28px; margin-bottom:10px; font-size:1rem;">Your admission details</h4>
+      <div class="table-wrap"><table class="data-table" id="pAdmTable"></table></div>
+      <h4 style="margin-top:28px; margin-bottom:10px; font-size:1rem;">Attendance log</h4>
+      <div class="table-wrap"><table class="data-table" id="pAttTable"><tr><th>Date</th><th>Status</th></tr></table></div>
+      <h4 style="margin-top:28px; margin-bottom:10px; font-size:1rem;">Payment history</h4>
+      <div class="table-wrap"><table class="data-table" id="pPayTable"><tr><th>Date</th><th>Course</th><th>Amount</th><th>Txn ID</th></tr></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ADMIN ============ -->
+<section class="admin" id="admin">
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Academy Admin</p>
+      <h2 style="margin-top:8px;">Mark attendance, review admissions &amp; payments</h2>
+      <p>Staff-only area. This is a lightweight demo lock, not real security — swap in real authentication before going live.</p>
+    </div>
+    <div class="admin-gate form-panel" id="adminGate">
+      <div class="field"><label for="adminPass">Staff passcode</label><input type="password" id="adminPass" placeholder="Enter passcode"></div>
+      <button class="btn btn-primary btn-full" id="adminUnlockBtn">Unlock admin view</button>
+      <p class="form-note">Demo passcode: <strong>ALEX2026</strong></p>
+      <div class="alert alert-error" id="adminGateError">Incorrect passcode. Try again.</div>
+    </div>
+
+    <div class="admin-panel" id="adminPanel">
+      <div class="admin-tabs">
+        <button class="admin-tab-btn active" data-view="viewRegs">Registrations</button>
+        <button class="admin-tab-btn" data-view="viewAtt">Mark Attendance</button>
+        <button class="admin-tab-btn" data-view="viewPay">Payments</button>
+      </div>
+
+      <div class="admin-view active" id="viewRegs">
+        <div class="admin-block">
+          <button class="btn btn-outline btn-small" id="refreshRegsBtn" style="border-color:var(--line); color:var(--ink);">Refresh list</button>
+          <div class="table-wrap"><table class="data-table" id="adminRegTable"><tr><th>Reg. ID</th><th>Name</th><th>Phone</th><th>Course</th><th>Batch</th><th>Demo?</th></tr></table></div>
+        </div>
+      </div>
+
+      <div class="admin-view" id="viewAtt">
+        <div class="admin-block">
+          <div class="form-grid">
+            <div class="field"><label for="attPhone">Student phone number</label><input type="tel" id="attPhone" maxlength="10"></div>
+            <div class="field"><label for="attDate">Date</label><input type="date" id="attDate"></div>
+            <div class="field"><label for="attStatus">Status</label>
+              <select id="attStatus"><option value="Present">Present</option><option value="Absent">Absent</option></select>
+            </div>
+          </div>
+          <button class="btn btn-teal" id="attSaveBtn">Save attendance</button>
+          <div class="alert alert-success" id="attSaveMsg">Attendance saved.</div>
+          <h4 style="margin-top:24px; margin-bottom:10px; font-size:1rem;">Log for this number</h4>
+          <div class="table-wrap"><table class="data-table" id="attLogTable"><tr><th>Date</th><th>Status</th></tr></table></div>
+        </div>
+      </div>
+
+      <div class="admin-view" id="viewPay">
+        <div class="admin-block">
+          <div class="field" style="max-width:320px;"><label for="payLookupPhone">Look up payments by phone</label><input type="tel" id="payLookupPhone" maxlength="10"></div>
+          <button class="btn btn-teal btn-small" id="payLookupBtn">Search</button>
+          <div class="table-wrap"><table class="data-table" id="adminPayTable"><tr><th>Date</th><th>Course</th><th>Amount</th><th>Status</th><th></th></tr></table></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testi">
+  <div class="container">
+    <div class="sec-head center">
+      <p class="eyebrow-plain">What students say</p>
+      <h2 style="margin-top:8px;">Real progress, in their words</h2>
+    </div>
+    <div class="testi-slide">
+      <div class="testi-quote" id="testiQuote"></div>
+      <div class="testi-name" id="testiName"></div>
+      <div class="testi-role" id="testiRole"></div>
+    </div>
+    <div class="testi-nav" id="testiNav"></div>
+  </div>
+</section>
+
+<!-- ============ MOMENTS / GALLERY ============ -->
+<section>
+  <div class="container">
+    <div class="sec-head">
+      <p class="eyebrow-plain">Life at the academy</p>
+      <h2 style="margin-top:8px;">What a week here looks like</h2>
+    </div>
+    <div class="moments-grid">
+      <div class="moment-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a4 4 0 0 1 4 4v3a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4Z"/><path d="M6 11a6 6 0 0 0 12 0"/><path d="M12 17v3M9 20h6"/></svg><h4>Fluency Lab</h4><p>Daily group conversation on real topics — news, opinions, everyday situations.</p></div>
+      <div class="moment-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V6a2 2 0 0 1 2-2h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 12h8M8 16h5"/></svg><h4>Grammar clinics</h4><p>Weekly focused sessions on the mistakes trainers actually hear in class.</p></div>
+      <div class="moment-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg><h4>Mock interviews</h4><p>One-on-one interview practice with feedback, before placement season.</p></div>
+      <div class="moment-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg><h4>Level-up ceremony</h4><p>A small certificate moment every time a batch completes its course.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <p class="eyebrow-plain">Visit / Contact</p>
+      <h2 style="margin-top:8px; margin-bottom:24px;">Come sit in on a class</h2>
+      <div class="contact-info-item">
+        <div class="ic">&#128205;</div>
+        <div><strong>Address</strong><span>Harikrishna Complex, above Sankalp Computers, Bhaji Market, Chandannagar, Pune, Maharashtra – 411014</span></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ic">&#128222;</div>
+        <div><strong>Phone / WhatsApp</strong><span>97679 16945</span></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ic">&#128203;</div>
+        <div><strong>Registration No.</strong><span>111054</span></div>
+      </div>
+      <div class="contact-info-item">
+        <div class="ic">&#128337;</div>
+        <div><strong>Enquiry &amp; admission hours</strong><span>Morning 7:00–12:00, Evening 4:00–9:00, every day</span></div>
+      </div>
+      <a href="https://wa.me/919767916945" target="_blank" rel="noopener" class="btn btn-teal" style="margin-top:10px;">&#128242; Message on WhatsApp</a>
+    </div>
+    <div class="map-wrap">
+      <iframe src="https://www.google.com/maps?q=Bhaji+Market,+Chandannagar,+Pune,+Maharashtra+411014&output=embed" loading="lazy" title="Map to Chandannagar, Pune"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container foot-grid">
+    <div>
+      <div class="brand" style="margin-bottom:14px;">
+        <div class="brand-mark">A</div>
+        <div class="brand-text">ALEX</div>
+      </div>
+      <p class="demo-note">English Speaking Courses &amp; Voice-Accent Classes. Harikrishna Complex, Bhaji Market, Chandannagar, Pune – 411014. Reg. No. 111054. Ph: 97679 16945.</p>
+    </div>
+    <div>
+      <div class="foot-title">Quick links</div>
+      <ul class="foot-links">
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#admission">Admission</a></li>
+        <li><a href="#fees">Fees &amp; Payment</a></li>
+        <li><a href="#portal">Student Portal</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="foot-title">Academy</div>
+      <ul class="foot-links">
+        <li><a href="#about">About us</a></li>
+        <li><a href="#admin">Staff admin</a></li>
+        <li><a href="#contact">Contact &amp; map</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container foot-bottom">
+    <span>© 2026 ALEX English Speaking Courses, Chandannagar, Pune. Reg. No. 111054.</span>
+    <span>Demo website — all data shown is for illustration.</span>
+  </div>
+</footer>
+
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+/* ============================================================
+   SUPABASE CONFIG — paste your own project's values here.
+   Get these from: Supabase Dashboard → Project Settings → API
+   ============================================================ */
+const SUPABASE_URL = "https://qhrvjlvuvvfzviqzwdam.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_m0Yd0MPKr9lxbuId03p__g_RGYvSO_w";
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+/* ============================================================
+   UPI PAYMENT CONFIG — paste your real UPI ID here (the one
+   linked to GPay/PhonePe/Paytm/your bank) so payments land in
+   your own account. Example: "9767916945@ybl" or "yourname@okhdfcbank"
+   ============================================================ */
+const ACADEMY_UPI_ID = "9359948142-2@ybl";
+const ACADEMY_UPI_NAME = "ALEX English Speaking Courses";
+
+/* ============================================================
+   EMAIL NOTIFICATIONS (EmailJS) — sends an email to the academy
+   owner every time someone submits the admission form or a
+   payment. This is a THIRD-PARTY-AGNOSTIC section: whoever owns
+   this website should create their OWN free EmailJS account
+   (emailjs.com) and paste their own values below — do not reuse
+   someone else's keys, since emails would go to their inbox.
+
+   HOW TO FILL THIS IN (for the site owner):
+   1. Sign up free at https://www.emailjs.com
+   2. Email Services → Add New Service → connect your Gmail/Outlook
+      → copy the "Service ID" it gives you → paste into
+      EMAILJS_SERVICE_ID below.
+   3. Email Templates → Create New Template. Use these 3 variables
+      in the template body: {{subject}}  {{message}}  {{to_email}}
+      (put {{to_email}} in the template's "To Email" field in
+      settings, and {{subject}} / {{message}} in the email body).
+      Copy the "Template ID" → paste into EMAILJS_TEMPLATE_ID.
+   4. Account → General → copy your "Public Key" → paste into
+      EMAILJS_PUBLIC_KEY.
+   5. Set OWNER_NOTIFICATION_EMAIL below to the email address that
+      should receive these alerts.
+   If these are left as placeholders, the website still works
+   normally — it just silently skips sending the email.
+   ============================================================ */
+const EMAILJS_PUBLIC_KEY = "PASTE_YOUR_EMAILJS_PUBLIC_KEY_HERE";
+const EMAILJS_SERVICE_ID = "PASTE_YOUR_EMAILJS_SERVICE_ID_HERE";
+const EMAILJS_TEMPLATE_ID = "PASTE_YOUR_EMAILJS_TEMPLATE_ID_HERE";
+const OWNER_NOTIFICATION_EMAIL = "PASTE_OWNER_EMAIL_HERE";
+
+/* ============================================================
+   DATA
+   ============================================================ */
+const COURSES = [
+  { id:"foundation", name:"Foundation Spoken English", level:"Beginner", duration:"2 months", price:3500,
+    desc:"Everyday vocabulary, basic grammar and the confidence to start a conversation in English.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>' },
+  { id:"fluency", name:"Advanced Fluency & Public Speaking", level:"Intermediate–Advanced", duration:"2 months", price:5500,
+    desc:"Structured speaking, debate and presentation practice for confident public speaking.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3a4 4 0 0 1 4 4v3a4 4 0 1 1-8 0V7a4 4 0 0 1 4-4Z"/><path d="M6 11a6 6 0 0 0 12 0M12 17v3M9 20h6"/></svg>' },
+  { id:"ielts", name:"IELTS / PTE Preparation", level:"All levels", duration:"3 months", price:8000,
+    desc:"Full test strategy across listening, reading, writing and speaking, with mock tests.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4M2 12a10 10 0 1 0 5-8.7"/></svg>' },
+  { id:"kids", name:"Kids Spoken English (Age 8–14)", level:"Beginner", duration:"Monthly", price:3000,
+    desc:"Playful, activity-based classes that build vocabulary, confidence and reading habits.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>' },
+  { id:"corporate", name:"Corporate / Business English", level:"Working professionals", duration:"6 weeks", price:6500,
+    desc:"Email writing, meeting language, client calls and workplace communication.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>' },
+  { id:"interview", name:"Personality Development & Interview Skills", level:"College / job seekers", duration:"1 month", price:4000,
+    desc:"Body language, mock interviews, group discussions and resume-to-interview storytelling.",
+    icon:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 11l3 3L22 4M2 12a10 10 0 1 0 5-8.7"/></svg>' },
+];
+
+const TESTIMONIALS = [
+  { quote:"I couldn't speak in front of my own class. Six months at Alex Spoken Academy and I led my college's farewell speech.", name:"Sanika P.", role:"Foundation → Fluency batch, Chandan Nagar" },
+  { quote:"The trainers correct you the moment you make a mistake, in a kind way. That's what actually fixed my grammar.", name:"Rohit K.", role:"Corporate English batch" },
+  { quote:"My son used to avoid speaking English at school. After the kids' batch, he volunteers to answer first.", name:"Meena D. (parent)", role:"Kids Spoken English" },
+  { quote:"Scored a band I needed for my visa on the first attempt, thanks to the mock tests every weekend.", name:"Farhan S.", role:"IELTS Preparation" },
+];
+
+/* ============================================================
+   DATABASE HELPERS (Supabase — real persistent storage, works
+   once you paste your project URL + anon key above)
+   ============================================================ */
+async function saveRegistration(record){
+  const { error } = await sb.from("registrations").upsert({
+    reg_id: record.regId, name: record.name, phone: record.phone, email: record.email,
+    age: record.age, course_id: record.courseId, course_name: record.courseName,
+    batch: record.batch, address: record.address, msg: record.msg, is_demo: record.isDemo
+  }, { onConflict: "phone" });
+  if(error){ console.error("saveRegistration failed", error); return false; }
+  return true;
+}
+async function getRegistration(phone){
+  const { data, error } = await sb.from("registrations").select("*").eq("phone", phone).maybeSingle();
+  if(error){ console.error("getRegistration failed", error); return null; }
+  return data;
+}
+async function listAllRegistrations(){
+  const { data, error } = await sb.from("registrations").select("*").order("created_at", { ascending:false });
+  if(error){ console.error("listAllRegistrations failed", error); return []; }
+  return data || [];
+}
+async function addAttendance(phone, date, status){
+  const { error } = await sb.from("attendance").insert({ phone, date, status });
+  if(error){ console.error("addAttendance failed", error); return false; }
+  return true;
+}
+async function getAttendance(phone){
+  const { data, error } = await sb.from("attendance").select("*").eq("phone", phone).order("date", { ascending:true });
+  if(error){ console.error("getAttendance failed", error); return []; }
+  return data || [];
+}
+async function addPayment(phone, record){
+  const { error } = await sb.from("payments").insert({
+    phone, course: record.course, amount: record.amount, txn_id: record.txnId, status: record.status
+  });
+  if(error){ console.error("addPayment failed", error); return false; }
+  return true;
+}
+async function getPayments(phone){
+  const { data, error } = await sb.from("payments").select("*").eq("phone", phone).order("created_at", { ascending:false });
+  if(error){ console.error("getPayments failed", error); return []; }
+  return data || [];
+}
+async function verifyPayment(id){
+  const { error } = await sb.from("payments").update({ status: "Verified" }).eq("id", id);
+  if(error){ console.error("verifyPayment failed", error); return false; }
+  return true;
+}
+
+function genId(prefix){ return prefix + "-" + Date.now().toString(36).toUpperCase(); }
+function fmtMoney(n){ return "₹" + n.toLocaleString("en-IN"); }
+
+/* ============================================================
+   EmailJS init + notify helper. Safe no-op until the owner
+   pastes their real keys above.
+   ============================================================ */
+const emailjsConfigured = !EMAILJS_PUBLIC_KEY.startsWith("PASTE_") && !EMAILJS_SERVICE_ID.startsWith("PASTE_") && !EMAILJS_TEMPLATE_ID.startsWith("PASTE_");
+if(emailjsConfigured && typeof emailjs !== "undefined"){
+  emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+}
+async function notifyOwner(subject, message){
+  if(!emailjsConfigured || typeof emailjs === "undefined") return;
+  try{
+    await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+      to_email: OWNER_NOTIFICATION_EMAIL, subject, message
+    });
+  }catch(e){ console.error("Email notification failed", e); }
+}
+
+/* ============================================================
+   Ticker — new batches / batch timings (duplicated once for a
+   seamless loop with the translateX(-50%) keyframe)
+   ============================================================ */
+(function fillTicker(){
+  const items = [
+    "&#128293; New batches starting now",
+    "Morning 7:00–8:30 AM",
+    "Morning 9:00–10:30 AM",
+    "Evening 5:00–6:30 PM",
+    "Evening 7:00–8:30 PM",
+    "Switch batch timing any day",
+    "Eligibility: min. 7th pass",
+    "Enquiry: Morning 7–12, Evening 4–9",
+  ];
+  const html = items.map(t => `<span><span class="live-dot"></span>${t}</span>`).join("");
+  document.getElementById("tickerTrack").innerHTML = html + html;
+})();
+
+/* ============================================================
+   NAV toggle
+   ============================================================ */
+document.getElementById("navToggle").addEventListener("click", ()=>{
+  document.getElementById("navLinks").classList.toggle("open");
+});
+document.querySelectorAll(".nav-links a").forEach(a=>{
+  a.addEventListener("click", ()=> document.getElementById("navLinks").classList.remove("open"));
+});
+
+/* ============================================================
+   HERO typing animation (single orchestrated moment)
+   ============================================================ */
+(function typeHero(){
+  const el = document.getElementById("typingText");
+  const full = "Well... my weekend was, um, quite good actually — I visited my grandparents in Kothrud.";
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduced){ el.textContent = full; return; }
+  let i = 0;
+  function tick(){
+    if(i <= full.length){
+      el.textContent = full.slice(0, i);
+      i++;
+      setTimeout(tick, 32);
+    } else {
+      setTimeout(()=>{ i = 0; tick(); }, 3200);
+    }
+  }
+  tick();
+})();
+
+/* ============================================================
+   Trust counters — animate on scroll into view
+   ============================================================ */
+(function counters(){
+  const nums = document.querySelectorAll(".trust-num");
+  const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const el = entry.target;
+        const target = parseFloat(el.dataset.count);
+        const decimals = parseInt(el.dataset.decimal || "0");
+        if(reduced){ el.textContent = target.toFixed(decimals); obs.unobserve(el); return; }
+        let cur = 0;
+        const steps = 40;
+        const inc = target / steps;
+        let n = 0;
+        const iv = setInterval(()=>{
+          n++; cur += inc;
+          el.textContent = cur >= target ? target.toFixed(decimals) : cur.toFixed(decimals);
+          if(n >= steps){ clearInterval(iv); }
+        }, 30);
+        obs.unobserve(el);
+      }
+    });
+  }, { threshold:0.5 });
+  nums.forEach(n=>obs.observe(n));
+})();
+
+/* ============================================================
+   Render courses + fee cards + admission course select
+   ============================================================ */
+function renderCourses(){
+  const list = document.getElementById("courseList");
+  list.innerHTML = COURSES.map(c=>`
+    <div class="course-row">
+      <div class="course-badge">${c.icon}</div>
+      <div>
+        <div class="course-title">${c.name}</div>
+        <div class="course-meta"><span>${c.level}</span><span>${c.duration}</span><span>${fmtMoney(c.price)}</span></div>
+        <p style="margin-top:8px; font-size:0.9rem; color:#5c5647;">${c.desc}</p>
+      </div>
+      <a href="#admission" class="btn btn-outline" style="border-color:var(--line); color:var(--ink);" onclick="preselectCourse('${c.id}')">Enrol</a>
+    </div>
+  `).join("");
+
+  const sel = document.getElementById("admCourse");
+  sel.innerHTML = `<option value="">Select a course</option>` + COURSES.map(c=>`<option value="${c.id}">${c.name} — ${fmtMoney(c.price)}</option>`).join("");
+}
+function preselectCourse(id){
+  document.getElementById("admCourse").value = id;
+}
+
+function renderFees(){
+  const grid = document.getElementById("feeGrid");
+  const styles = ["", "alt", "alt2", "", "alt", "alt2"];
+  grid.innerHTML = COURSES.map((c,i)=>`
+    <div class="fee-card ${styles[i % styles.length]}">
+      <div class="fee-name">${c.name}</div>
+      <div class="fee-price">${fmtMoney(c.price)} <span>one-time</span></div>
+      <div class="fee-duration">${c.duration} · ${c.level}</div>
+      <ul>
+        <li>All course material included</li>
+        <li>Free re-attempt of one missed batch</li>
+        <li>Certificate on completion</li>
+      </ul>
+      <button class="btn btn-teal" onclick="openPayModal('${c.id}')">Pay now</button>
+    </div>
+  `).join("");
+}
+renderCourses();
+renderFees();
+
+/* ============================================================
+   Admission form submit
+   ============================================================ */
+document.getElementById("admissionForm").addEventListener("submit", async function(e){
+  e.preventDefault();
+  const name = document.getElementById("admName").value.trim();
+  const phone = document.getElementById("admPhone").value.trim();
+  const email = document.getElementById("admEmail").value.trim();
+  const age = document.getElementById("admAge").value;
+  const courseId = document.getElementById("admCourse").value;
+  const batch = document.getElementById("admBatch").value;
+  const address = document.getElementById("admAddress").value.trim();
+  const msg = document.getElementById("admMsg").value.trim();
+  const isDemo = document.getElementById("admDemo").checked;
+
+  const successEl = document.getElementById("admSuccess");
+  const errorEl = document.getElementById("admError");
+  successEl.classList.remove("show"); errorEl.classList.remove("show");
+
+  if(!name || !/^[0-9]{10}$/.test(phone) || !age || !courseId){
+    errorEl.classList.add("show");
+    return;
+  }
+  const course = COURSES.find(c=>c.id===courseId);
+  const regId = genId("ASA");
+  const record = { regId, name, phone, email, age, courseId, courseName: course.name, batch, address, msg, isDemo, date: new Date().toISOString() };
+  const ok = await saveRegistration(record);
+  if(!ok){ errorEl.textContent = "Could not save — please check your internet connection and try again."; errorEl.classList.add("show"); return; }
+
+  notifyOwner(
+    "New admission enquiry: " + name,
+    `New registration on the website.\n\nName: ${name}\nPhone: ${phone}\nEmail: ${email || "—"}\nAge: ${age}\nCourse: ${course.name}\nBatch: ${batch || "—"}\nAddress: ${address || "—"}\nDemo class requested: ${isDemo ? "Yes" : "No"}\nMessage: ${msg || "—"}\nAdmission ID: ${regId}`
+  );
+
+  successEl.textContent = `Registered! Your admission ID is ${regId}. We'll call you on ${phone} to confirm your ${batch || "batch"}.`;
+  successEl.classList.add("show");
+  this.reset();
+  document.getElementById("admDemo").checked = true;
+});
+
+/* ============================================================
+   Payment modal
+   ============================================================ */
+let currentPayCourse = null;
+function buildUpiLink(amount, note){
+  const params = new URLSearchParams({
+    pa: ACADEMY_UPI_ID, pn: ACADEMY_UPI_NAME, am: String(amount), cu: "INR", tn: note
+  });
+  return "upi://pay?" + params.toString();
+}
+function openPayModal(courseId){
+  currentPayCourse = COURSES.find(c=>c.id===courseId);
+  document.getElementById("payCourseLabel").textContent = currentPayCourse.name;
+  document.getElementById("payCourseAmt").textContent = fmtMoney(currentPayCourse.price);
+  document.getElementById("payTotalAmt").textContent = fmtMoney(currentPayCourse.price);
+  document.getElementById("payPhone").value = "";
+  document.getElementById("payUpiBtn").href = buildUpiLink(currentPayCourse.price, currentPayCourse.name + " - Alex Academy");
+  document.getElementById("payStepDetails").style.display = "block";
+  document.getElementById("payStepProcessing").style.display = "none";
+  document.getElementById("payStepSuccess").style.display = "none";
+  document.getElementById("payModal").classList.add("open");
+}
+document.getElementById("payClose").addEventListener("click", ()=> document.getElementById("payModal").classList.remove("open"));
+document.getElementById("payModal").addEventListener("click", (e)=>{ if(e.target.id === "payModal"){} });
+document.getElementById("payDoneBtn").addEventListener("click", ()=> document.getElementById("payModal").classList.remove("open"));
+
+document.getElementById("payConfirmBtn").addEventListener("click", async ()=>{
+  const phone = document.getElementById("payPhone").value.trim();
+  if(!/^[0-9]{10}$/.test(phone)){ alert("Enter the 10-digit mobile number you registered with."); return; }
+  document.getElementById("payStepDetails").style.display = "none";
+  document.getElementById("payStepProcessing").style.display = "block";
+
+  const txnId = genId("REF");
+  const record = { course: currentPayCourse.name, amount: currentPayCourse.price, txnId, status:"Pending Verification" };
+  await addPayment(phone, record);
+
+  notifyOwner(
+    "Payment pending verification: " + currentPayCourse.name,
+    `A student submitted a UPI payment for verification.\n\nPhone: ${phone}\nCourse: ${currentPayCourse.name}\nAmount: ${fmtMoney(currentPayCourse.price)}\nReference ID: ${txnId}\n\nPlease check your UPI app / bank for this amount, then mark it Verified in the website's Admin panel.`
+  );
+
+  setTimeout(()=>{
+    document.getElementById("payStepProcessing").style.display = "none";
+    document.getElementById("payStepSuccess").style.display = "block";
+    document.getElementById("payTxnId").textContent = txnId;
+  }, 1400);
+});
+
+
+/* ============================================================
+   Student portal lookup
+   ============================================================ */
+document.getElementById("portalLookupBtn").addEventListener("click", async ()=>{
+  const phone = document.getElementById("portalPhone").value.trim();
+  const errorEl = document.getElementById("portalError");
+  const resultEl = document.getElementById("portalResult");
+  errorEl.classList.remove("show"); resultEl.classList.remove("show");
+
+  if(!/^[0-9]{10}$/.test(phone)){ errorEl.textContent = "Please enter a valid 10-digit mobile number."; errorEl.classList.add("show"); return; }
+
+  const reg = await getRegistration(phone);
+  if(!reg){ errorEl.classList.add("show"); return; }
+
+  const attendance = await getAttendance(phone);
+  const payments = await getPayments(phone);
+
+  const present = attendance.filter(a=>a.status === "Present").length;
+  const pct = attendance.length ? Math.round((present / attendance.length) * 100) : 0;
+  document.getElementById("pStatAttendance").textContent = attendance.length ? pct + "%" : "—";
+  document.getElementById("pStatClasses").textContent = attendance.length;
+  const hasVerified = payments.some(p=>p.status === "Verified");
+  document.getElementById("pStatPayment").textContent = hasVerified ? "Verified" : (payments.length ? "Pending Verification" : "Not Paid");
+
+  document.getElementById("pAdmTable").innerHTML = `
+    <tr><th>Admission ID</th><td>${reg.reg_id}</td></tr>
+    <tr><th>Name</th><td>${reg.name}</td></tr>
+    <tr><th>Course</th><td>${reg.course_name}</td></tr>
+    <tr><th>Batch</th><td>${reg.batch || "—"}</td></tr>
+  `;
+  document.getElementById("pAttTable").innerHTML = `<tr><th>Date</th><th>Status</th></tr>` +
+    (attendance.length ? attendance.map(a=>`<tr><td>${a.date}</td><td><span class="tag ${a.status==='Present'?'tag-present':'tag-absent'}">${a.status}</span></td></tr>`).join("") : `<tr><td colspan="2">No attendance marked yet.</td></tr>`);
+  document.getElementById("pPayTable").innerHTML = `<tr><th>Date</th><th>Course</th><th>Amount</th><th>Status</th></tr>` +
+    (payments.length ? payments.map(p=>`<tr><td>${new Date(p.created_at).toLocaleDateString('en-IN')}</td><td>${p.course}</td><td>${fmtMoney(p.amount)}</td><td><span class="tag ${p.status==='Verified'?'tag-paid':'tag-pending'}">${p.status}</span></td></tr>`).join("") : `<tr><td colspan="4">No payments recorded yet.</td></tr>`);
+
+
+  resultEl.classList.add("show");
+});
+
+/* ============================================================
+   Admin gate + panel
+   ============================================================ */
+document.getElementById("adminUnlockBtn").addEventListener("click", ()=>{
+  const pass = document.getElementById("adminPass").value;
+  if(pass === "ALEX2026"){
+    document.getElementById("adminGate").style.display = "none";
+    document.getElementById("adminPanel").classList.add("show");
+    loadAdminRegistrations();
+  } else {
+    document.getElementById("adminGateError").classList.add("show");
+  }
+});
+
+document.querySelectorAll(".admin-tab-btn").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    document.querySelectorAll(".admin-tab-btn").forEach(b=>b.classList.remove("active"));
+    document.querySelectorAll(".admin-view").forEach(v=>v.classList.remove("active"));
+    btn.classList.add("active");
+    document.getElementById(btn.dataset.view).classList.add("active");
+  });
+});
+
+async function loadAdminRegistrations(){
+  const table = document.getElementById("adminRegTable");
+  table.innerHTML = `<tr><th>Reg. ID</th><th>Name</th><th>Phone</th><th>Course</th><th>Batch</th><th>Demo?</th></tr>`;
+  const regs = await listAllRegistrations();
+  if(!regs.length){ table.innerHTML += `<tr><td colspan="6">No registrations yet.</td></tr>`; return; }
+  for(const rec of regs){
+    table.innerHTML += `<tr><td>${rec.reg_id}</td><td>${rec.name}</td><td>${rec.phone}</td><td>${rec.course_name}</td><td>${rec.batch||"—"}</td><td>${rec.is_demo ? "Yes" : "No"}</td></tr>`;
+  }
+}
+document.getElementById("refreshRegsBtn").addEventListener("click", loadAdminRegistrations);
+
+document.getElementById("attSaveBtn").addEventListener("click", async ()=>{
+  const phone = document.getElementById("attPhone").value.trim();
+  const date = document.getElementById("attDate").value;
+  const status = document.getElementById("attStatus").value;
+  if(!/^[0-9]{10}$/.test(phone) || !date){ alert("Enter a valid 10-digit phone number and a date."); return; }
+  await addAttendance(phone, date, status);
+  document.getElementById("attSaveMsg").classList.add("show");
+  loadAttendanceLog(phone);
+});
+document.getElementById("attPhone").addEventListener("change", (e)=> loadAttendanceLog(e.target.value.trim()));
+async function loadAttendanceLog(phone){
+  const table = document.getElementById("attLogTable");
+  table.innerHTML = `<tr><th>Date</th><th>Status</th></tr>`;
+  if(!/^[0-9]{10}$/.test(phone)) return;
+  const log = await getAttendance(phone);
+  table.innerHTML += log.length ? log.map(a=>`<tr><td>${a.date}</td><td><span class="tag ${a.status==='Present'?'tag-present':'tag-absent'}">${a.status}</span></td></tr>`).join("") : `<tr><td colspan="2">No records yet.</td></tr>`;
+}
+
+document.getElementById("payLookupBtn").addEventListener("click", async ()=>{
+  const phone = document.getElementById("payLookupPhone").value.trim();
+  if(!/^[0-9]{10}$/.test(phone)) return;
+  await renderAdminPayments(phone);
+});
+async function renderAdminPayments(phone){
+  const table = document.getElementById("adminPayTable");
+  table.innerHTML = `<tr><th>Date</th><th>Course</th><th>Amount</th><th>Status</th><th></th></tr>`;
+  const payments = await getPayments(phone);
+  table.innerHTML += payments.length ? payments.map(p=>`
+    <tr>
+      <td>${new Date(p.created_at).toLocaleDateString('en-IN')}</td>
+      <td>${p.course}</td>
+      <td>${fmtMoney(p.amount)}</td>
+      <td><span class="tag ${p.status==='Verified'?'tag-paid':'tag-pending'}">${p.status}</span></td>
+      <td>${p.status !== "Verified" ? `<button class="btn btn-teal btn-small" onclick="markVerified('${p.id}','${phone}')">Mark Verified</button>` : ""}</td>
+    </tr>
+  `).join("") : `<tr><td colspan="5">No payments found for this number.</td></tr>`;
+}
+async function markVerified(id, phone){
+  await verifyPayment(id);
+  await renderAdminPayments(phone);
+}
+
+/* ============================================================
+   Testimonials slider
+   ============================================================ */
+let testiIdx = 0;
+function renderTesti(){
+  const t = TESTIMONIALS[testiIdx];
+  document.getElementById("testiQuote").textContent = "“" + t.quote + "”";
+  document.getElementById("testiName").textContent = t.name;
+  document.getElementById("testiRole").textContent = t.role;
+  const nav = document.getElementById("testiNav");
+  nav.innerHTML = TESTIMONIALS.map((_,i)=>`<button class="testi-dot ${i===testiIdx?'active':''}" data-i="${i}" aria-label="Testimonial ${i+1}"></button>`).join("");
+  nav.querySelectorAll(".testi-dot").forEach(d=> d.addEventListener("click", ()=>{ testiIdx = parseInt(d.dataset.i); renderTesti(); }));
+}
+renderTesti();
+setInterval(()=>{ testiIdx = (testiIdx + 1) % TESTIMONIALS.length; renderTesti(); }, 6000);
+
+/* Default attendance date to today */
+document.getElementById("attDate").valueAsDate = new Date();
+
+/* ============================================================
+   Scroll-to-top button
+   ============================================================ */
+(function scrollTop(){
+  const btn = document.getElementById("scrollTopBtn");
+  window.addEventListener("scroll", ()=>{
+    if(window.scrollY > 500){ btn.classList.add("show"); }
+    else{ btn.classList.remove("show"); }
+  });
+  btn.addEventListener("click", ()=>{
+    window.scrollTo({ top:0, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+  });
+})();
+</script>
+</body>
+</html>

@@ -913,8 +913,8 @@ async function saveRegistration(record){
     age: record.age, course_id: record.courseId, course_name: record.courseName,
     batch: record.batch, address: record.address, msg: record.msg, is_demo: record.isDemo
   }, { onConflict: "phone" });
-  if(error){ console.error("saveRegistration failed", error); return false; }
-  return true;
+  if(error){ console.error("saveRegistration failed", error); return error.message || "Unknown error"; }
+  return null;
 }
 async function getRegistration(phone){
   const { data, error } = await sb.from("registrations").select("*").eq("phone", phone).maybeSingle();
@@ -1123,8 +1123,8 @@ document.getElementById("admissionForm").addEventListener("submit", async functi
   const course = COURSES.find(c=>c.id===courseId);
   const regId = genId("ASA");
   const record = { regId, name, phone, email, age, courseId, courseName: course.name, batch, address, msg, isDemo, date: new Date().toISOString() };
-  const ok = await saveRegistration(record);
-  if(!ok){ errorEl.textContent = "Could not save — please check your internet connection and try again."; errorEl.classList.add("show"); return; }
+  const saveError = await saveRegistration(record);
+  if(saveError){ errorEl.textContent = "Could not save — " + saveError; errorEl.classList.add("show"); return; }
 
   notifyOwner(
     "New admission enquiry: " + name,
